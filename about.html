@@ -22,7 +22,7 @@
 
         <ul class="nav-links">
 
-            <li><a href="about.html">About</a></ul>
+            <li><a href="about.html">About</a></li>
 
             <li><a href="projects.html">Projects</a></li>
 
@@ -59,14 +59,14 @@
 
 </section>
 
-<section class="interest">
+<section class="interests">
     <h2>My interest</h2>
 
     <div class="cards">
 
-        <div class="card">
+        <div class="card" data-gallery="programming">
 
-            <h3>programming</h3>
+            <h3>Programming</h3>
 
             <p>
                 Full stack development, software engineering,
@@ -75,7 +75,7 @@
             </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-gallery="cycling">
 
             <h3>Cyling</h3>
 
@@ -86,7 +86,7 @@
             </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-gallery="outdoors">
             <h3>Outdoors</h3>
 
             <p>
@@ -117,3 +117,32 @@
 
         <div class="card">Linux</div>
     </div>
+</section>
+
+</main>
+
+<footer>
+
+    <p>@ 2026 John</p>
+
+</footer>
+
+<div id="galleryModal" class="modal">
+
+    <span class="close">&times;</span>
+
+    <button class="prev">&#10094;</button>
+
+    <img id="galleryImage">
+
+    <button class="next">&#10095;</button>
+
+    <p id="caption"></p>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
