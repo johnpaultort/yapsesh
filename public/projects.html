@@ -37,20 +37,54 @@
     </nav>
 </header>
 
-<main>
+<main class="projects-page">
 
-<main>
-
-<section class="Projects">
     <h1>Projects</h1>
 
-    <h2>Hello! I'm John Paul.</h2>
-
     <p>
-        I have always been coding in the background,
-        but never knew how important they are to show to the world.
-        My biggest deal with coding, and the reason why I do it
-        is to think outside the box thinking "What can I do to impact the world?".
+        A wide variety of projects to use from personal, and school projects.
     </p>
 
-</section>
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+
+        <button class="filter-btn" data-filter="personal">Personal</button>
+
+        <button class="filter-btn" data-filter="school">School</button>
+
+        <button class="filter-btn" data-filter="c++">C++</button>
+
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+
+        <button class="filter-btn" data-filter="python">Python</button>
+
+        <button class="filter-btn" data-filter="web">Web</button>
+    </div>
+
+    <div class="project-grid">
+        <article class="project-card" data-category="personal web python">
+            <img src="images/projects/snowfitter.png" alt="snowfitter">
+
+            <div class="project-info">
+
+                <h2>Snowfitter</h2>
+
+                <p>
+                    Ski & Snowboard recommendation finder under construction
+                    for 2026/27 season for Sports Basement South Bay.
+                </p>
+
+                <div class="tags">
+                    <span>Personal</span>
+                    <span>Web</span>
+                    <span>Python</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
