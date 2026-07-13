@@ -1,0 +1,31 @@
+@media (max-width:768px){
+
+    .cards{
+
+        grid-template-columns:1fr;
+    }
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .contact-cards{
+
+        grid-template-columns:1fr;
+    }
+
+    .gallery-container{
+
+        flex-direction:column;
+    }
+
+    #prevBtn,
+    #nextBtn{
+
+        width:55px;
+
+        font-size:45px;
+    }
+
+}
