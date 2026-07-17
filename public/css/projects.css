@@ -1,30 +1,34 @@
-/* Projects */
-.projects-page{
+/* Projects Page */
+.projects-page {
     max-width:1300px;
     margin:150px auto;
     padding:20px;
 }
 
-.projects-page h1{
+.projects-page h1 {
     text-align:center;
     font-size:3rem;
+    margin-bottom: 15px;
 }
 
-.projects-page p{
+.projects-page p {
     text-align:center;
-    color:#bbb;
-    margin-bottom:40px;
+    color: #bcbcbc;
+    margin: 0 auto 25px;
+    line-height: 1.6;
 }
 
-.filters{
+/*This the the css format that I am looking for when looking for buttons*/
+/* Buttons */
+.project-filters {
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:15px;
-    margin-bottom:60px;
+    margin: 50px 0;
 }
 
-.filter-btn{
+.project-filter-btn {
     background:#222;
     color:white;
     border:none;
@@ -32,74 +36,193 @@
     border-radius:30px;
     cursor:pointer;
     transition:.3s;
+    font-size: .95rem;
+    font-weight: 600;
 }
 
-.filter-btn:hover{
+.project-filter-btn:hover {
     background:#3399ff;
 }
 
-.filter-btn.active{
+.project-filter-btn.active {
     background:#3399ff;
 }
+/* Button end */
 
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap:35px;
 }
 
-.project-card{
+/* Project Card */
+.project-card {
+    display: flex;
+    flex-direction: column;
+
     background:#1b1b1b;
+
     border-radius:15px;
+
     overflow:hidden;
-    transition:.3s;
+
+    transition:.3s ease;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 
-.project-card:hover{
+.project-card:hover {
     transform:translateY(-8px);
+
+    box-shadow: 0, 18px, 40px rgba(0,0,0,.25);
 }
 
-.project-card img{
+/* Project Display */
 
-    width:100%;
+.project-card img {
 
-    aspect-ratio:16/10;
+    width: 100%;
 
-    object-fit:cover;
+    height: 230px;
 
-    transition:.3s;
+    object-fit: cover;
+
+    transition: .35s;
 }
 
 .project-card:hover img{
-    transform:scale(1.05);
+    transform: scale(1.05);
 }
 
+/* Project Content */
 .project-info{
-    padding:25px;
+    padding:24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-.tags{
-    margin-top:20px;
+.project-info h2{
+    margin-bottom: 12px;
+
+    font-size: 1.6rem;
 }
 
-.tags span{
-    display:inline-block;
-    background:#333;
-    padding:7px 14px;
-    border-radius:20px;
-    margin-right:8px;
-    margin-top:8px;
-    font-size:.8rem;
+.project-info p {
+    text-align: left;
+    margin: 0;
+    color:#cfcfcf;
+    line-height: 1.6;
 }
 
-.project-card{
-
-    display:flex;
-
-    flex-direction:column;
+/* Tags */
+.project-tags{
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top:20px;
 }
 
-.project-info{
+.project-tags span{
+    background: #333;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+}
 
-    flex:1;
+/* Hover Overlay */
+
+.project-card::after {
+
+    content: "View Project →";
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    background: rgba(51,153,255,.95);
+
+    color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 30px;
+
+    font-size: .8rem;
+
+    font-weight: 700;
+
+    opacity: 0;
+
+    transform: translateY(-10px);
+
+    transition: .3s;
+
+}
+
+.project-card {
+
+    position: relative;
+
+}
+
+.project-card:hover::after {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .projects-page {
+
+        padding: 15px;
+
+    }
+
+    .projects-page h1 {
+
+        font-size: 2.4rem;
+
+    }
+
+    .project-card img {
+
+        height: 200px;
+
+    }
+
+    .project-info {
+
+        padding: 20px;
+
+    }
+
 }
