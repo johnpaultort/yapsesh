@@ -9,9 +9,10 @@
 
     <title>Journal</title>
 
+    
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/journal.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -37,4 +38,59 @@
     </nav>
 </header>
 
-<main>
+<main class="journal-page">
+    <h1>Journal</h1>
+
+    <p>
+        A collection of my thoughts that allows me to talk about what I have learned
+        or what I have done in a day. This is something that I have thought about instead
+        of wasting paper.
+    </p>
+
+    <div class="journal-filters">
+        <button class="journal-filter-btn active" data-filter="all">All</button>
+
+        <button class="journal-filter-btn" data-filter="personal">Personal</button>
+
+        <button class="journal-filter-btn" data-filter="school">School</button>
+
+        <button class="journal-filter-btn" data-filter="cars">Cars</button>
+
+        <button class="journal-filter-btn" data-filter="pokemon">Pokemon</button>
+
+        <button class="journal-filter-btn" data-filter="other">Other</button>
+    </div>
+
+    <div class="journal-grid">
+        <article class="journal-card" data-category="portfolio personal html">
+            <img src="images/journal/random.png" alt="random">
+
+            <div class="journal-info">
+
+                <span class="journal-date">
+                    July 16, 2026
+                </span>                
+
+                <h2>Building My Portfolio Website</h2>
+
+                <p>
+                    I am thinking of many projects to accomplish
+                    there are so many ideas that I have created
+                    some are started some are not. The only issue that I have
+                    is sometimes I cannot finish what I have started.
+                </p>
+
+                <div class="journal-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Portfolio</span>
+                </div>
+            </div>
+        </article>
+    </div>
+</main>
+
+<script src="js/journal.js"></script>
+
+</body>
+</html>
