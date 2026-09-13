@@ -1,5 +1,5 @@
 // Project Filters
-const buttons = document.querySelectorAll(".project.filter-btn");
+const buttons = document.querySelectorAll(".project-filter-btn");
 const cards = document.querySelectorAll(".project-card");
 
 buttons.forEach(button => {
@@ -17,7 +17,7 @@ buttons.forEach(button => {
                 filter === "all" ||
                 card.dataset.category.includes(filter)
             ) {
-                card.style.display = "block";
+                card.style.display = "flex";
             }
             else {
                 card.style.display = "none";

@@ -1,5 +1,5 @@
 // Journal Filters
-const buttons = document.querySelectorAll(".journal.filter-btn");
+const buttons = document.querySelectorAll(".journal-filter-btn");
 const cards = document.querySelectorAll(".journal-card");
 
 buttons.forEach(button => {
